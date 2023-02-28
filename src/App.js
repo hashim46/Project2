@@ -6,56 +6,87 @@ import {useEffect, useState} from "react"
 
 function App() {
 
-  let [imageUrls, setImageUrls] = useState(0)
+  let [imageUrls, setImageUrls] = useState(null)
   let [loading, setLoading] = useState(false)
-  let [text, setText] = useState()
+  let [topText, setTopText] = useState()
+  let [value1, setValue1] = useState()
+  let [value2, setValue2] = useState()
+  let [bottomText, setBottomText] = useState()
 
    //useEffect(()=>{generate()}, [])
 
 
-  let array1 = ["A", "B", "C", "D"]
-  //let array2 = ["Hey", "Yo"]
-  //let array3 = ["WhatsUp", "Man"]
-  //let url = `https://apimeme.com/meme?meme=${array1[Math.floor(Math.random()*2)]}&top=${array2[Math.floor(Math.random()*2)]}&bottom=${array3[Math.floor(Math.random()*2)]}`
-
-
-  async function generate(){
+  async function getImage(){
+    
+    //Making the loading icon appear
     setLoading(true)
+
+    // Fetching
     let url = "https://api.imgflip.com/get_memes"
     const response = await fetch(url)
     let data = await response.json()
     
-    console.log(data)
-
+    //Mapping through the data to get the image Urls
     let Urls = data.data.memes.map((item)=> {
-      return <img alt = "abc"  key = {item.id} className= {array1[Math.random() * 3 ]} src= {item.url} /> 
+      return <img alt = "abc"  key = {item.id} src= {item.url} /> 
     })
-    console.log(Urls)
 
+    // Ask  the question about this
+    //await new Promise(resolve => setTimeout(resolve, 1000))
 
-    await new Promise(resolve => setTimeout(resolve, 1000))
-
-    setImageUrls(Urls)
+    setImageUrls(Urls[Math.floor(Math.random()*99)])
+    
+    //Make the loading icon disappear after the fetch is done
     setLoading(false)
   }
   
-  console.log(imageUrls)
   
-  
+    function handleTopText(){
+      if(imageUrls){
+      setTopText(value1)
+      }
+      
+    }
+
+    function handleBottomText(){
+      if(imageUrls){
+      setBottomText(value2)
+      }
+    }
 
 
   return (
     <div className="App">
-      <h1>Click on the button to <br/> generate a meme</h1>
-      <div><button onClick = {generate}> Generate Meme</button> </div>
+      <h1> Meme Generator</h1>
+
+      <div>
+      <br/>
+      <div><button onClick = {getImage}> Choose Your meme Image </button> </div>
+      <br/>
+      </div>
+
+      <input value={value1} onChange={(event)=> setValue1(event.target.value) }/>
+      <button onClick = {handleTopText} >  Set Header </button>
+
+
+      <input value={value2} onChange={(event)=> setValue2(event.target.value) }/>
+      <button onClick = {handleBottomText} > Set Footer </button>
+
+      
+
+      
       <br/>
       { loading ? 
       <img src="https://cdn3.iconfinder.com/data/icons/glypho-generic-icons/64/cog-settings-512.png" className="App-logo" alt="logo" /> : <> </>}
       <div className = "Loading">
       </div>
       <div style={{ position: "relative" }} >
-      {imageUrls[4]}
-      <div style={{ position: "absolute",  bottom: "8px", left: "16px", fontSize: "80px" }} > abc {text} </div>
+      {imageUrls}
+
+      <div style={{ position: "absolute",  top: "8px", left: "16px", fontSize: "60px" }} > {topText} </div>
+
+      <div style={{ position: "absolute",  bottom: "8px", left: "16px", fontSize: "60px" }} > {bottomText} </div>
+      
       </div>
     </div>
   );
