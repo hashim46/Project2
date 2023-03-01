@@ -1,6 +1,6 @@
 import './App.css';
 import {useEffect, useState} from "react"
-import GetImage from './components/GetImage';
+//import GetImage from './components/GetImage';
 
 
 
