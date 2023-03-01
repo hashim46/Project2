@@ -1,6 +1,6 @@
 import './App.css';
 import {useEffect, useState} from "react"
-
+import GetImage from './components/GetImage';
 
 
 
@@ -13,10 +13,10 @@ function App() {
   let [value2, setValue2] = useState()
   let [bottomText, setBottomText] = useState()
 
-   //useEffect(()=>{generate()}, [])
+   useEffect(()=>{GetImage()}, [])
 
 
-  async function getImage(){
+   async function GetImage(){
     
     //Making the loading icon appear
     setLoading(true)
@@ -61,7 +61,7 @@ function App() {
 
       <div>
       <br/>
-      <div><button onClick = {getImage}> Choose Your meme Image </button> </div>
+      <div><button onClick = {GetImage}> Choose a random image </button> </div>
       <br/>
       </div>
 
@@ -83,9 +83,9 @@ function App() {
       <div style={{ position: "relative" }} >
       {imageUrls}
 
-      <div style={{ position: "absolute",  top: "8px", left: "16px", fontSize: "60px" }} > {topText} </div>
+      <div style={{ textShadow: "0 0 2px red" , textTransform: 'uppercase', color: 'white', fontWeight: 'bold', position: "absolute",  top: "5%", width: '100%',fontSize: "70px", inlineSize: "100%", overflowWrap: "break-word"}} > {topText} </div>
 
-      <div style={{ position: "absolute",  bottom: "8px", left: "16px", fontSize: "60px" }} > {bottomText} </div>
+      <div style={{ textShadow: "-2px 0 black" , textTransform: 'uppercase', color: 'white', fontWeight: 'bold', position: "absolute",  bottom: "5%", width: '100%', fontSize: "70px", inlineSize: "100%", overflowWrap: "break-word" }} > {bottomText} </div>
       
       </div>
     </div>
