@@ -15,8 +15,8 @@ function Nav(props){
                 <div> The App </div>
             </Link>
 
-            <Link to = "/ContactUs">
-                <div> Contact Us </div>
+            <Link to = "/Suggestions">
+                <div> Need Ideas? </div>
             </Link>
             
             
