@@ -1,7 +1,9 @@
 import './App.css';
 import {useEffect, useState} from "react"
-//import GetImage from './components/GetImage';
-
+import { Navigate, Route, Routes } from "react-router-dom";
+import About from "./pages/About"
+import Suggestions from "./pages/Suggestions"
+import Nav from "./components/Nav"
 
 
 function App() {
@@ -40,7 +42,6 @@ function App() {
     setLoading(false)
   }
   
-  
     function handleTopText(){
       if(imageUrls){
       setTopText(value1)
@@ -57,8 +58,14 @@ function App() {
 
   return (
     <div className="App">
-      <h1> Meme Generator</h1>
+      <Nav />
+      <Routes>
+        <Route path="/about" element={<About/>} />
+        <Route path="/suggestions" element={<Suggestions />} />
+        <Route path="*" element={<Navigate to="/" />} />
+      </Routes>
 
+      <h1> Meme Generator</h1>
       <div>
       <br/>
       <div><button onClick = {GetImage}> Choose a random image </button> </div>
@@ -72,9 +79,6 @@ function App() {
       <input value={value2} onChange={(event)=> setValue2(event.target.value) }/>
       <button onClick = {handleBottomText} > Set Footer </button>
 
-      
-
-      
       <br/>
       { loading ? 
       <img src="https://cdn3.iconfinder.com/data/icons/glypho-generic-icons/64/cog-settings-512.png" className="App-logo" alt="logo" /> : <> </>}
