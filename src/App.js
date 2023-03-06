@@ -3,6 +3,7 @@ import './App.css';
 import Nav from "./components/Nav"
 import { Navigate, Route, Routes } from "react-router-dom";
 import About from "./pages/About";
+import ContactUs from "./pages/ContactUs";
 
 function App() {
 
@@ -11,10 +12,11 @@ function App() {
         <Nav />
       <Routes>
         <Route path="/about" element={<About/>} />
+        <Route path="/" element={<Generator/>} />
         <Route path="/generator" element={<Generator />} />
+        <Route path="/contactUs" element={<ContactUs />} />
         <Route path="*" element={<Navigate to="/" />} />
       </Routes>
-        <Generator/>
       </div>
     )
 }

@@ -15,7 +15,7 @@ function Nav(props){
                 <div> The App </div>
             </Link>
 
-            <Link to = "/about">
+            <Link to = "/ContactUs">
                 <div> Contact Us </div>
             </Link>
             

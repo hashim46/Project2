@@ -39,6 +39,7 @@
 h1{
   color: rgba(187, 15, 15, 0.541);
   font-size: 3em;
+  text-align: center;
 }
 
 .Loading{

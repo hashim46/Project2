@@ -2,7 +2,10 @@ function About(){
     return(
         <div> 
 
-        <p> HAshim </p>
+
+        <h1> About Page</h1>
+
+        <p> It is Simple </p>
 
         </div>
     )
