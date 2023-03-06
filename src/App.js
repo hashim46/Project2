@@ -58,14 +58,16 @@ function App() {
 
   return (
     <div className="App">
+      
+      
+
+      <h1> Meme Generator</h1>
       <Nav />
       <Routes>
         <Route path="/about" element={<About/>} />
         <Route path="/suggestions" element={<Suggestions />} />
         <Route path="*" element={<Navigate to="/" />} />
       </Routes>
-
-      <h1> Meme Generator</h1>
       <div>
       <br/>
       <div><button onClick = {GetImage}> Choose a random image </button> </div>
@@ -92,6 +94,8 @@ function App() {
       <div style={{ textShadow: "-2px 0 black" , textTransform: 'uppercase', color: 'white', fontWeight: 'bold', position: "absolute",  bottom: "5%", width: '100%', fontSize: "70px", inlineSize: "100%", overflowWrap: "break-word" }} > {bottomText} </div>
       
       </div>
+
+
     </div>
   );
 }
