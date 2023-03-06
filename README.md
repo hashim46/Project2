@@ -7,7 +7,9 @@ Run the command npm start
 
 # Pages
 How it works
+
 The App
+
 Need Ideas
 
 # Library
