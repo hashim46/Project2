@@ -25,5 +25,5 @@ The react router was used to navigate to different pages
 The UseState() was utilized to store values like input values
 async function was used to fetch the data from an api
 
-# Link to the netliffy website
+# Link to the netlify website
 https://endearing-palmier-dddfa7.netlify.app/
