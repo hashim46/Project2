@@ -5,12 +5,18 @@ import {Link} from 'react-router-dom'
 function Nav(props){
     return (
         <div className = "nav">
-            <Link to ="/suggestions">
-                <div>AI help</div>
+            
+            
+            <Link to = "/about">
+                <div> About </div>
+            </Link>
+            
+            <Link to ="/Generator">
+                <div> The App </div>
             </Link>
 
             <Link to = "/about">
-                <div> About </div>
+                <div> Contact Us </div>
             </Link>
             
             

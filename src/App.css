@@ -37,7 +37,8 @@
 }
 
 h1{
-  color: black
+  color: rgba(187, 15, 15, 0.541);
+  font-size: 3em;
 }
 
 .Loading{
@@ -47,10 +48,10 @@ text-align: center;
 .nav {
   display: flex;
   justify-content: space-between;
-  background-color:rgb(188, 82, 198) ;
+  background-color:rgb(179, 98, 138) ;
   color: white;
   padding: 15px;
-  font-size: 2em;
+  font-size: 1.5em;
 }
 
 .nav a {

@@ -1,7 +1,7 @@
-function Suggestions(){
+function ContactUs(){
     return(
         <div> Suggestions page </div>
     )
 }
 
-export default Suggestions
+export default ContactUs
