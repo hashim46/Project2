@@ -6,11 +6,13 @@ import About from "./pages/About";
 import ContactUs from "./pages/ContactUs";
 import Footer from "./components/Footer"
 import SocialMedia from "./components/SocialMedia";
+import BlackTop from "./components/BlackTop";
 
 function App() {
 
     return(
       <div>
+        <BlackTop/>
         <Nav />
       <Routes>
         <Route path="/about" element={<About/>} />
