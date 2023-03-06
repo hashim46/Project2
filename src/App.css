@@ -59,3 +59,12 @@ text-align: center;
   color: white;
   text-decoration: none;
 }
+
+.Footer {
+  display: flex;
+  justify-content: space-between;
+  background-color:rgb(179, 98, 138) ;
+  color: white;
+  padding: 15px;
+  font-size: 1em;
+}

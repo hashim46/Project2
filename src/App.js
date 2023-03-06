@@ -4,6 +4,7 @@ import Nav from "./components/Nav"
 import { Navigate, Route, Routes } from "react-router-dom";
 import About from "./pages/About";
 import ContactUs from "./pages/ContactUs";
+import Footer from "./components/Footer"
 
 function App() {
 
@@ -17,6 +18,7 @@ function App() {
         <Route path="/contactUs" element={<ContactUs />} />
         <Route path="*" element={<Navigate to="/" />} />
       </Routes>
+      <Footer/>
       </div>
     )
 }
