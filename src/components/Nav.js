@@ -8,7 +8,7 @@ function Nav(props){
             
             
             <Link to = "/about">
-                <div> About </div>
+                <div> How it works </div>
             </Link>
             
             <Link to ="/Generator">

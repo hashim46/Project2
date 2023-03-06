@@ -3,9 +3,9 @@ function About(){
         <div> 
 
 
-        <h1> About Page</h1>
+        <h1> Intructions:</h1>
 
-        <p>  •  It is Simple  </p>
+        <p>  •  Click the The App Tab  </p>
 
         <p> •  You choose a random image by a click of a button</p>
 
